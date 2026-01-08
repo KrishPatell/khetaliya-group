@@ -562,7 +562,9 @@ label {
   align-items: center;
   margin-top: 4.5rem;
   display: flex;
-  overflow: hidden;
+  overflow: visible;
+  width: 100%;
+  position: relative;
 }
 
 .section_heading {
@@ -615,10 +617,13 @@ label {
 .hero_slide-show {
   grid-column-gap: 1.25rem;
   grid-row-gap: 1.25rem;
-  width: auto;
+  width: 100vw;
+  max-width: 100vw;
   margin-top: 0;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
   display: block;
-  position: static;
+  position: relative;
   overflow: hidden;
 }
 
@@ -2657,8 +2662,10 @@ label {
 
 .image-66 {
   aspect-ratio: auto;
-  object-fit: contain;
-  height: 100%;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .download-button {
