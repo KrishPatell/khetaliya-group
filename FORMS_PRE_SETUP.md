@@ -44,12 +44,24 @@ Example:
 </form>
 ```
 
-## Configure Recipient Email in Formspree Dashboard
+## Configure Recipient Emails
 
+The form is configured to send emails to all three addresses:
+- `info@khetaliyagroup.com`
+- `khetaliyainfraventuresllp@gmail.com`
+- `redevelopment@khetaliyagroup.com`
+
+### Option 1: Using Hidden Fields (Already Configured)
+The form includes a hidden `_to` field with all three email addresses. Formspree will send submissions to all of them.
+
+### Option 2: Configure in Formspree Dashboard (Recommended)
 1. Log in to your Formspree account
 2. Go to your form settings for `mvzgedqj`
-3. Set the recipient email address where you want to receive submissions
-4. All form submissions will be sent to that email
+3. Add all three email addresses as recipients:
+   - `info@khetaliyagroup.com`
+   - `khetaliyainfraventuresllp@gmail.com`
+   - `redevelopment@khetaliyagroup.com`
+4. All form submissions will be sent to all three addresses
 
 ## Testing
 

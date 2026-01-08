@@ -39,6 +39,16 @@
         form.enctype = 'application/x-www-form-urlencoded';
       }
 
+      // Add multiple recipient emails if not already present
+      // Formspree uses _to field with comma-separated emails to send to all recipients
+      if (!form.querySelector('input[name="_to"]') && FORMSPREE_CONFIG.recipientEmails && FORMSPREE_CONFIG.recipientEmails.length > 0) {
+        const toInput = document.createElement('input');
+        toInput.type = 'hidden';
+        toInput.name = '_to';
+        toInput.value = FORMSPREE_CONFIG.recipientEmails.join(',');
+        form.insertBefore(toInput, form.firstChild);
+      }
+
       // Add submit event listener for better UX (loading states, etc.)
       form.addEventListener('submit', function(e) {
         handleFormSubmit(form);
